@@ -1,0 +1,35 @@
+Call Date: 2024-01-20
+Duration: 45 minutes
+Rep: Sarah Johnson
+Customer: Enterprise Corp (acc_001)
+Deal Value: $50,000 ARR
+Stage: Negotiation
+
+TRANSCRIPT:
+
+Rep: Thanks for taking the time today. What are your main challenges with your current solution?
+
+Customer: Well, the biggest issue is data export. We need to export our data regularly for compliance reporting, but the CSV export feature keeps crashing. We lost a deal to CompetitorX because they have reliable export functionality.
+
+Rep: I understand. How often do you need to export data?
+
+Customer: Weekly. Sometimes daily during busy periods. Our team of 50+ needs this functionality to be reliable. The export button crashes every time we try to use it.
+
+Rep: That's definitely something we can address. What else is important to you?
+
+Customer: Performance is also a concern. The dashboard can be slow when we're working with large datasets - takes 15-20 seconds to load sometimes. But the export issue is the main blocker right now.
+
+Rep: Got it. So reliable export is the priority, and performance improvements would be nice to have?
+
+Customer: Exactly. If you can fix the export issue, we're very interested. But we're also evaluating CompetitorX who already has this working. The export crashes are a deal breaker.
+
+Rep: I'll make sure our product team knows this is a priority. Is there anything else?
+
+Customer: Not really. Just need that export to work reliably. That's the deal breaker. We need CSV export that doesn't crash.
+
+KEY INSIGHTS:
+- Export feature crashes are blocking the deal
+- CompetitorX has reliable export (competitive pressure)
+- Performance concerns secondary
+- Weekly/daily export needs
+- 50+ user team affected

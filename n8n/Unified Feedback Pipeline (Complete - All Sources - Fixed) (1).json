@@ -1,0 +1,1301 @@
+{
+  "name": "Unified Feedback Pipeline (Complete - All Sources - Fixed)",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "e92381f8-e3e9-4a3b-91b2-c4438b74be3c",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1728,
+        512
+      ]
+    },
+    {
+      "parameters": {
+        "filePath": "C:\\\\Users\\\\HP\\\\Downloads\\\\naio-final\\\\n8n\\\\mock_data\\\\zendesk_mock.csv"
+      },
+      "id": "72fa60c5-40d6-456c-83db-c529e4fe7590",
+      "name": "Zendesk Mock",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        -240,
+        -128
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse CSV from binary data\nconst items = $input.all();\nconst results = [];\n\nfor (const item of items) {\n  if (item.binary && item.binary.data) {\n    const binaryData = item.binary.data;\n    const dataBuffer = Buffer.from(binaryData.data, binaryData.encoding || 'base64');\n    const csvText = dataBuffer.toString('utf8');\n    const lines = csvText.split('\\n').filter(line => line.trim());\n    \n    if (lines.length > 0) {\n      const headers = lines[0].split(',').map(h => h.trim());\n      \n      for (let i = 1; i < lines.length; i++) {\n        const values = lines[i].split(',').map(v => v.trim());\n        const row = { source: 'zendesk' };\n        headers.forEach((header, index) => {\n          row[header] = values[index] || '';\n        });\n        results.push({ json: row });\n      }\n    }\n  }\n}\n\nreturn results;"
+      },
+      "id": "56eb7c66-7ae5-427e-9c61-b4156f13fdf0",
+      "name": "Parse Zendesk Mock",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        192,
+        -560
+      ]
+    },
+    {
+      "parameters": {
+        "filePath": "C:\\\\Users\\\\HP\\\\Downloads\\\\naio-final\\\\n8n\\\\mock_data\\\\salesforce_mock.csv"
+      },
+      "id": "5e00e640-7c37-41da-ac94-7027d29d7644",
+      "name": "Salesforce Mock",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        -144,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse CSV from binary data\nconst items = $input.all();\nconst results = [];\n\nfor (const item of items) {\n  if (item.binary && item.binary.data) {\n    const binaryData = item.binary.data;\n    const dataBuffer = Buffer.from(binaryData.data, binaryData.encoding || 'base64');\n    const csvText = dataBuffer.toString('utf8');\n    const lines = csvText.split('\\n').filter(line => line.trim());\n    \n    if (lines.length > 0) {\n      const headers = lines[0].split(',').map(h => h.trim());\n      \n      for (let i = 1; i < lines.length; i++) {\n        const values = lines[i].split(',').map(v => v.trim());\n        const row = { source: 'salesforce' };\n        headers.forEach((header, index) => {\n          row[header] = values[index] || '';\n        });\n        results.push({ json: row });\n      }\n    }\n  }\n}\n\nreturn results;"
+      },
+      "id": "2cad4353-fc71-4ab6-8364-59995dfcae25",
+      "name": "Parse Salesforce Mock",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        192,
+        -368
+      ]
+    },
+    {
+      "parameters": {
+        "filePath": "C:\\\\Users\\\\HP\\\\Downloads\\\\naio-final\\\\n8n\\\\mock_data\\\\nps_mock.csv"
+      },
+      "id": "89b32986-b200-4280-b097-3ae9c7751561",
+      "name": "NPS Mock",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        -16,
+        128
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse CSV from binary data\nconst items = $input.all();\nconst results = [];\n\nfor (const item of items) {\n  if (item.binary && item.binary.data) {\n    const binaryData = item.binary.data;\n    const dataBuffer = Buffer.from(binaryData.data, binaryData.encoding || 'base64');\n    const csvText = dataBuffer.toString('utf8');\n    const lines = csvText.split('\\n').filter(line => line.trim());\n    \n    if (lines.length > 0) {\n      const headers = lines[0].split(',').map(h => h.trim());\n      \n      for (let i = 1; i < lines.length; i++) {\n        const values = lines[i].split(',').map(v => v.trim());\n        const row = { source: 'nps' };\n        headers.forEach((header, index) => {\n          row[header] = values[index] || '';\n        });\n        results.push({ json: row });\n      }\n    }\n  }\n}\n\nreturn results;"
+      },
+      "id": "78b1b92c-0919-427c-bab5-3886d2eb49ee",
+      "name": "Parse NPS Mock",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        272,
+        -16
+      ]
+    },
+    {
+      "parameters": {
+        "filePath": "C:\\\\Users\\\\HP\\\\Downloads\\\\naio-final\\\\n8n\\\\mock_data\\\\app_store_mock.csv"
+      },
+      "id": "b68b2f0b-6a23-424e-b15c-b548c5f3ea3b",
+      "name": "App Store Mock",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        0,
+        272
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse CSV from binary data\nconst items = $input.all();\nconst results = [];\n\nfor (const item of items) {\n  if (item.binary && item.binary.data) {\n    const binaryData = item.binary.data;\n    const dataBuffer = Buffer.from(binaryData.data, binaryData.encoding || 'base64');\n    const csvText = dataBuffer.toString('utf8');\n    const lines = csvText.split('\\n').filter(line => line.trim());\n    \n    if (lines.length > 0) {\n      const headers = lines[0].split(',').map(h => h.trim());\n      \n      for (let i = 1; i < lines.length; i++) {\n        const values = lines[i].split(',').map(v => v.trim());\n        const row = { source: 'app_store' };\n        headers.forEach((header, index) => {\n          row[header] = values[index] || '';\n        });\n        results.push({ json: row });\n      }\n    }\n  }\n}\n\nreturn results;"
+      },
+      "id": "7b0d3724-e644-4525-ab70-bc442ab40980",
+      "name": "Parse App Store Mock",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        304,
+        176
+      ]
+    },
+    {
+      "parameters": {
+        "filePath": "C:\\\\Users\\\\HP\\\\Downloads\\\\naio-final\\\\n8n\\\\mock_data\\\\forum_social_mock.csv"
+      },
+      "id": "568a17dd-6958-406f-ad36-874429a26113",
+      "name": "Forum Social Mock",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        16,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse CSV from binary data\nconst items = $input.all();\nconst results = [];\n\nfor (const item of items) {\n  if (item.binary && item.binary.data) {\n    const binaryData = item.binary.data;\n    const dataBuffer = Buffer.from(binaryData.data, binaryData.encoding || 'base64');\n    const csvText = dataBuffer.toString('utf8');\n    const lines = csvText.split('\\n').filter(line => line.trim());\n    \n    if (lines.length > 0) {\n      const headers = lines[0].split(',').map(h => h.trim());\n      \n      for (let i = 1; i < lines.length; i++) {\n        const values = lines[i].split(',').map(v => v.trim());\n        const row = { source: 'forum_social' };\n        headers.forEach((header, index) => {\n          row[header] = values[index] || '';\n        });\n        results.push({ json: row });\n      }\n    }\n  }\n}\n\nreturn results;"
+      },
+      "id": "29af76a2-d239-4689-a907-8643bf115f92",
+      "name": "Parse Forum Social Mock",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        464,
+        304
+      ]
+    },
+    {
+      "parameters": {
+        "filePath": "C:\\\\Users\\\\HP\\\\Downloads\\\\naio-final\\\\n8n\\\\mock_data\\\\intercom_mock.csv"
+      },
+      "id": "76d43764-897f-41d3-82e0-34bdde50cb22",
+      "name": "Intercom Mock",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        -128,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse CSV from binary data\nconst items = $input.all();\nconst results = [];\n\nfor (const item of items) {\n  if (item.binary && item.binary.data) {\n    const binaryData = item.binary.data;\n    const dataBuffer = Buffer.from(binaryData.data, binaryData.encoding || 'base64');\n    const csvText = dataBuffer.toString('utf8');\n    const lines = csvText.split('\\n').filter(line => line.trim());\n    \n    if (lines.length > 0) {\n      const headers = lines[0].split(',').map(h => h.trim());\n      \n      for (let i = 1; i < lines.length; i++) {\n        const values = lines[i].split(',').map(v => v.trim());\n        const row = { source: 'intercom' };\n        headers.forEach((header, index) => {\n          row[header] = values[index] || '';\n        });\n        results.push({ json: row });\n      }\n    }\n  }\n}\n\nreturn results;"
+      },
+      "id": "2e9c7052-82e0-4d0d-8dc0-a5ecc36062c9",
+      "name": "Parse Intercom Mock",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        416,
+        464
+      ]
+    },
+    {
+      "parameters": {
+        "filePath": "C:\\\\Users\\\\HP\\\\Downloads\\\\naio-final\\\\n8n\\\\mock_data\\\\gong_call_1.txt"
+      },
+      "id": "551f7982-bb37-4b3f-9ff3-7f8a1efc6823",
+      "name": "Gong Call 1",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        32,
+        544
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse Gong call transcript\nconst items = $input.all();\nconst results = [];\n\nfor (const item of items) {\n  if (item.binary && item.binary.data) {\n    const binaryData = item.binary.data;\n    const dataBuffer = Buffer.from(binaryData.data, binaryData.encoding || 'base64');\n    const text = dataBuffer.toString('utf8');\n    \n    results.push({\n      json: {\n        source: 'gong',\n        content: text,\n        call_id: 'gong_1'\n      }\n    });\n  }\n}\n\nreturn results;"
+      },
+      "id": "d5129587-bf9a-42d8-b4e8-509655a62433",
+      "name": "Parse Gong 1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        208,
+        608
+      ]
+    },
+    {
+      "parameters": {
+        "filePath": "C:\\\\Users\\\\HP\\\\Downloads\\\\naio-final\\\\n8n\\\\mock_data\\\\gong_call_2.txt"
+      },
+      "id": "cefbed48-c185-4993-9025-d9cb54c0ab9a",
+      "name": "Gong Call 2",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        0,
+        656
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse Gong call transcript\nconst items = $input.all();\nconst results = [];\n\nfor (const item of items) {\n  if (item.binary && item.binary.data) {\n    const binaryData = item.binary.data;\n    const dataBuffer = Buffer.from(binaryData.data, binaryData.encoding || 'base64');\n    const text = dataBuffer.toString('utf8');\n    \n    results.push({\n      json: {\n        source: 'gong',\n        content: text,\n        call_id: 'gong_2'\n      }\n    });\n  }\n}\n\nreturn results;"
+      },
+      "id": "8e29412f-8c92-4fa8-8f66-3e9132056029",
+      "name": "Parse Gong 2",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        560,
+        608
+      ]
+    },
+    {
+      "parameters": {
+        "filePath": "C:\\\\Users\\\\HP\\\\Downloads\\\\naio-final\\\\n8n\\\\mock_data\\\\gong_call_3.txt"
+      },
+      "id": "c82f35a2-3b82-4bde-99cf-6cb112787a83",
+      "name": "Gong Call 3",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        0,
+        704
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse Gong call transcript\nconst items = $input.all();\nconst results = [];\n\nfor (const item of items) {\n  if (item.binary && item.binary.data) {\n    const binaryData = item.binary.data;\n    const dataBuffer = Buffer.from(binaryData.data, binaryData.encoding || 'base64');\n    const text = dataBuffer.toString('utf8');\n    \n    results.push({\n      json: {\n        source: 'gong',\n        content: text,\n        call_id: 'gong_3'\n      }\n    });\n  }\n}\n\nreturn results;"
+      },
+      "id": "d8ad5367-ee13-4775-b47c-5635a8b7c882",
+      "name": "Parse Gong 3",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        736,
+        496
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse Gong call transcript\nconst items = $input.all();\nconst results = [];\n\nfor (const item of items) {\n  if (item.binary && item.binary.data) {\n    const binaryData = item.binary.data;\n    const dataBuffer = Buffer.from(binaryData.data, binaryData.encoding || 'base64');\n    const text = dataBuffer.toString('utf8');\n    \n    results.push({\n      json: {\n        source: 'gong',\n        content: text,\n        call_id: 'gong_4'\n      }\n    });\n  }\n}\n\nreturn results;"
+      },
+      "id": "b610f80d-e772-461e-ae3b-287edfc55440",
+      "name": "Parse Gong 4",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        384,
+        704
+      ]
+    },
+    {
+      "parameters": {
+        "filePath": "C:\\\\Users\\\\HP\\\\Downloads\\\\naio-final\\\\n8n\\\\mock_data\\\\gong_call_5.txt"
+      },
+      "id": "f5aa8182-c559-4e3b-a9ab-0ff887af1fd4",
+      "name": "Gong Call 5",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        0,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse Gong call transcript\nconst items = $input.all();\nconst results = [];\n\nfor (const item of items) {\n  if (item.binary && item.binary.data) {\n    const binaryData = item.binary.data;\n    const dataBuffer = Buffer.from(binaryData.data, binaryData.encoding || 'base64');\n    const text = dataBuffer.toString('utf8');\n    \n    results.push({\n      json: {\n        source: 'gong',\n        content: text,\n        call_id: 'gong_5'\n      }\n    });\n  }\n}\n\nreturn results;"
+      },
+      "id": "624f6c3e-17d0-4666-9df4-6178ea4ef4d8",
+      "name": "Parse Gong 5",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        240,
+        752
+      ]
+    },
+    {
+      "parameters": {
+        "filePath": "C:\\\\Users\\\\HP\\\\Downloads\\\\naio-final\\\\n8n\\\\mock_data\\\\gong_call_6.txt"
+      },
+      "id": "8916c50d-e353-4090-84b8-68088ab96465",
+      "name": "Gong Call 6",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        0,
+        864
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse Gong call transcript\nconst items = $input.all();\nconst results = [];\n\nfor (const item of items) {\n  if (item.binary && item.binary.data) {\n    const binaryData = item.binary.data;\n    const dataBuffer = Buffer.from(binaryData.data, binaryData.encoding || 'base64');\n    const text = dataBuffer.toString('utf8');\n    \n    results.push({\n      json: {\n        source: 'gong',\n        content: text,\n        call_id: 'gong_6'\n      }\n    });\n  }\n}\n\nreturn results;"
+      },
+      "id": "0ce24a3a-8402-4be6-8dfb-5d3f395b25e4",
+      "name": "Parse Gong 6",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        208,
+        864
+      ]
+    },
+    {
+      "parameters": {
+        "filePath": "C:\\\\Users\\\\HP\\\\Downloads\\\\naio-final\\\\n8n\\\\mock_data\\\\gong_call_7.txt"
+      },
+      "id": "f4fe08f4-7f54-40ac-9806-3443c0a1ea9f",
+      "name": "Gong Call 7",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        0,
+        912
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse Gong call transcript\nconst items = $input.all();\nconst results = [];\n\nfor (const item of items) {\n  if (item.binary && item.binary.data) {\n    const binaryData = item.binary.data;\n    const dataBuffer = Buffer.from(binaryData.data, binaryData.encoding || 'base64');\n    const text = dataBuffer.toString('utf8');\n    \n    results.push({\n      json: {\n        source: 'gong',\n        content: text,\n        call_id: 'gong_7'\n      }\n    });\n  }\n}\n\nreturn results;"
+      },
+      "id": "4fc61d62-cc53-4423-8b42-7b5167226710",
+      "name": "Parse Gong 7",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        208,
+        912
+      ]
+    },
+    {
+      "parameters": {
+        "filePath": "C:\\\\Users\\\\HP\\\\Downloads\\\\naio-final\\\\n8n\\\\mock_data\\\\gong_call_8.txt"
+      },
+      "id": "0c8bf8cc-011e-46c9-b8c7-30649cca7bd4",
+      "name": "Gong Call 8",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        0,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse Gong call transcript\nconst items = $input.all();\nconst results = [];\n\nfor (const item of items) {\n  if (item.binary && item.binary.data) {\n    const binaryData = item.binary.data;\n    const dataBuffer = Buffer.from(binaryData.data, binaryData.encoding || 'base64');\n    const text = dataBuffer.toString('utf8');\n    \n    results.push({\n      json: {\n        source: 'gong',\n        content: text,\n        call_id: 'gong_8'\n      }\n    });\n  }\n}\n\nreturn results;"
+      },
+      "id": "c0aaa1d4-415d-4966-a986-075d157a54cb",
+      "name": "Parse Gong 8",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        208,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "filePath": "C:\\\\Users\\\\HP\\\\Downloads\\\\naio-final\\\\n8n\\\\mock_data\\\\dovetail_interview_1.txt"
+      },
+      "id": "6c5085bc-bbde-4c12-9418-507cd5dcfc63",
+      "name": "Dovetail Interview 1",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        0,
+        1008
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse Dovetail interview\nconst items = $input.all();\nconst results = [];\n\nfor (const item of items) {\n  if (item.binary && item.binary.data) {\n    const binaryData = item.binary.data;\n    const dataBuffer = Buffer.from(binaryData.data, binaryData.encoding || 'base64');\n    const text = dataBuffer.toString('utf8');\n    \n    results.push({\n      json: {\n        source: 'dovetail',\n        content: text,\n        interview_id: 'dovetail_1'\n      }\n    });\n  }\n}\n\nreturn results;"
+      },
+      "id": "e9bcc61f-c23d-4f71-9aeb-096287902595",
+      "name": "Parse Dovetail 1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        160,
+        1072
+      ]
+    },
+    {
+      "parameters": {
+        "filePath": "C:\\\\Users\\\\HP\\\\Downloads\\\\naio-final\\\\n8n\\\\mock_data\\\\dovetail_interview_2.txt"
+      },
+      "id": "cd83816d-7cc4-4422-b8eb-69032ce995ea",
+      "name": "Dovetail Interview 2",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        -240,
+        1136
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse Dovetail interview\nconst items = $input.all();\nconst results = [];\n\nfor (const item of items) {\n  if (item.binary && item.binary.data) {\n    const binaryData = item.binary.data;\n    const dataBuffer = Buffer.from(binaryData.data, binaryData.encoding || 'base64');\n    const text = dataBuffer.toString('utf8');\n    \n    results.push({\n      json: {\n        source: 'dovetail',\n        content: text,\n        interview_id: 'dovetail_2'\n      }\n    });\n  }\n}\n\nreturn results;"
+      },
+      "id": "da3eb1e2-35bd-4862-bcc6-37181e6b3bab",
+      "name": "Parse Dovetail 2",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        32,
+        1216
+      ]
+    },
+    {
+      "parameters": {
+        "filePath": "C:\\\\Users\\\\HP\\\\Downloads\\\\naio-final\\\\n8n\\\\mock_data\\\\dovetail_interview_3.txt"
+      },
+      "id": "35a154f7-8b86-4761-83dd-c685e8bf89c5",
+      "name": "Dovetail Interview 3",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        1296
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse Dovetail interview\nconst items = $input.all();\nconst results = [];\n\nfor (const item of items) {\n  if (item.binary && item.binary.data) {\n    const binaryData = item.binary.data;\n    const dataBuffer = Buffer.from(binaryData.data, binaryData.encoding || 'base64');\n    const text = dataBuffer.toString('utf8');\n    \n    results.push({\n      json: {\n        source: 'dovetail',\n        content: text,\n        interview_id: 'dovetail_3'\n      }\n    });\n  }\n}\n\nreturn results;"
+      },
+      "id": "616f288b-f7c5-459f-963b-9ccca2e31574",
+      "name": "Parse Dovetail 3",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        80,
+        1328
+      ]
+    },
+    {
+      "parameters": {
+        "filePath": "C:\\\\Users\\\\HP\\\\Downloads\\\\naio-final\\\\n8n\\\\mock_data\\\\dovetail_interview_4.txt"
+      },
+      "id": "c34128c7-9928-4152-aebe-29df4def4614",
+      "name": "Dovetail Interview 4",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        -352,
+        1440
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse Dovetail interview\nconst items = $input.all();\nconst results = [];\n\nfor (const item of items) {\n  if (item.binary && item.binary.data) {\n    const binaryData = item.binary.data;\n    const dataBuffer = Buffer.from(binaryData.data, binaryData.encoding || 'base64');\n    const text = dataBuffer.toString('utf8');\n    \n    results.push({\n      json: {\n        source: 'dovetail',\n        content: text,\n        interview_id: 'dovetail_4'\n      }\n    });\n  }\n}\n\nreturn results;"
+      },
+      "id": "a40e298e-a3d2-491c-9310-36d845e6387e",
+      "name": "Parse Dovetail 4",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        16,
+        1456
+      ]
+    },
+    {
+      "parameters": {
+        "filePath": "C:\\\\Users\\\\HP\\\\Downloads\\\\naio-final\\\\n8n\\\\mock_data\\\\dovetail_interview_5.txt"
+      },
+      "id": "1dbb7066-cd21-4090-85f5-c375f2f18bf2",
+      "name": "Dovetail Interview 5",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        -512,
+        1568
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse Dovetail interview\nconst items = $input.all();\nconst results = [];\n\nfor (const item of items) {\n  if (item.binary && item.binary.data) {\n    const binaryData = item.binary.data;\n    const dataBuffer = Buffer.from(binaryData.data, binaryData.encoding || 'base64');\n    const text = dataBuffer.toString('utf8');\n    \n    results.push({\n      json: {\n        source: 'dovetail',\n        content: text,\n        interview_id: 'dovetail_5'\n      }\n    });\n  }\n}\n\nreturn results;"
+      },
+      "id": "e31ace28-f452-46b0-833b-d4115a65813d",
+      "name": "Parse Dovetail 5",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -160,
+        1600
+      ]
+    },
+    {
+      "parameters": {
+        "filePath": "C:\\\\Users\\\\HP\\\\Downloads\\\\naio-final\\\\n8n\\\\mock_data\\\\dovetail_interview_6.txt"
+      },
+      "id": "bc5e57b1-d6d5-40de-a7ca-b9e0bbfe79a4",
+      "name": "Dovetail Interview 6",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        -432,
+        1712
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse Dovetail interview\nconst items = $input.all();\nconst results = [];\n\nfor (const item of items) {\n  if (item.binary && item.binary.data) {\n    const binaryData = item.binary.data;\n    const dataBuffer = Buffer.from(binaryData.data, binaryData.encoding || 'base64');\n    const text = dataBuffer.toString('utf8');\n    \n    results.push({\n      json: {\n        source: 'dovetail',\n        content: text,\n        interview_id: 'dovetail_6'\n      }\n    });\n  }\n}\n\nreturn results;"
+      },
+      "id": "331dc1c4-3ba9-4c36-b5c1-00dfee0eb3d1",
+      "name": "Parse Dovetail 6",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        320,
+        1696
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "mergeByFields": {
+          "values": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "id": "120eb5fa-dda2-4eb9-a282-f4f3a429d165",
+      "name": "Merge CSV Sources",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2,
+      "position": [
+        800,
+        -224
+      ]
+    },
+    {
+      "parameters": {
+        "url": "http://127.0.0.1:8000/api/n8n/webhook/unified",
+        "options": {}
+      },
+      "id": "cfc29924-97d9-4351-bb09-4f0f442be5c1",
+      "name": "Send to Backend",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        1712,
+        576
+      ]
+    },
+    {
+      "parameters": {
+        "numberInputs": 3
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        1072,
+        208
+      ],
+      "id": "37d4cec6-7b51-44d0-a97b-62512942dba4",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "mergeByFields": {
+          "values": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "id": "efa9756d-d40a-46bb-af26-071431e031df",
+      "name": "Merge CSV Sources1",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2,
+      "position": [
+        640,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "mergeByFields": {
+          "values": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "id": "d45d22c6-e200-4787-af51-0c1af30d2baa",
+      "name": "Merge CSV Sources2",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2,
+      "position": [
+        832,
+        160
+      ]
+    },
+    {
+      "parameters": {
+        "numberInputs": 4
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        1024,
+        464
+      ],
+      "id": "31af1ff5-f36c-442e-93d9-fe96ee8b5222",
+      "name": "Merge1"
+    },
+    {
+      "parameters": {
+        "numberInputs": 4
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        1392,
+        544
+      ],
+      "id": "6b73f488-9b7e-47cf-bce9-bc98b45fc4cc",
+      "name": "Merge2"
+    },
+    {
+      "parameters": {
+        "numberInputs": 4
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        1024,
+        800
+      ],
+      "id": "fe7ec98f-f5ba-42d6-a9e8-7a905d8cb6c4",
+      "name": "Merge3"
+    },
+    {
+      "parameters": {
+        "numberInputs": 6
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        976,
+        1088
+      ],
+      "id": "31f1fd44-fea9-4d78-bb66-a861dc062116",
+      "name": "Merge4"
+    }
+  ],
+  "pinData": {
+    "Manual Trigger": [
+      {
+        "json": {}
+      }
+    ]
+  },
+  "connections": {
+    "Zendesk Mock": {
+      "main": [
+        [
+          {
+            "node": "Parse Zendesk Mock",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesforce Mock": {
+      "main": [
+        [
+          {
+            "node": "Parse Salesforce Mock",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "NPS Mock": {
+      "main": [
+        [
+          {
+            "node": "Parse NPS Mock",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "App Store Mock": {
+      "main": [
+        [
+          {
+            "node": "Parse App Store Mock",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Forum Social Mock": {
+      "main": [
+        [
+          {
+            "node": "Parse Forum Social Mock",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Intercom Mock": {
+      "main": [
+        [
+          {
+            "node": "Parse Intercom Mock",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gong Call 1": {
+      "main": [
+        [
+          {
+            "node": "Parse Gong 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gong Call 2": {
+      "main": [
+        [
+          {
+            "node": "Parse Gong 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gong Call 3": {
+      "main": [
+        [
+          {
+            "node": "Parse Gong 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gong Call 5": {
+      "main": [
+        [
+          {
+            "node": "Parse Gong 5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gong Call 6": {
+      "main": [
+        [
+          {
+            "node": "Parse Gong 6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gong Call 7": {
+      "main": [
+        [
+          {
+            "node": "Parse Gong 7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gong Call 8": {
+      "main": [
+        [
+          {
+            "node": "Parse Gong 8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dovetail Interview 1": {
+      "main": [
+        [
+          {
+            "node": "Parse Dovetail 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dovetail Interview 2": {
+      "main": [
+        [
+          {
+            "node": "Parse Dovetail 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dovetail Interview 3": {
+      "main": [
+        [
+          {
+            "node": "Parse Dovetail 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dovetail Interview 4": {
+      "main": [
+        [
+          {
+            "node": "Parse Dovetail 4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dovetail Interview 5": {
+      "main": [
+        [
+          {
+            "node": "Parse Dovetail 5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dovetail Interview 6": {
+      "main": [
+        [
+          {
+            "node": "Parse Dovetail 6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Zendesk Mock": {
+      "main": [
+        [
+          {
+            "node": "Merge CSV Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Salesforce Mock": {
+      "main": [
+        [
+          {
+            "node": "Merge CSV Sources",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Parse Gong 1": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Gong 2": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Parse Gong 5": {
+      "main": [
+        [
+          {
+            "node": "Merge3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Gong 6": {
+      "main": [
+        [
+          {
+            "node": "Merge3",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Parse Dovetail 1": {
+      "main": [
+        [
+          {
+            "node": "Merge4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Dovetail 2": {
+      "main": [
+        [
+          {
+            "node": "Merge4",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Parse Dovetail 4": {
+      "main": [
+        [
+          {
+            "node": "Merge4",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "Parse Dovetail 5": {
+      "main": [
+        [
+          {
+            "node": "Merge4",
+            "type": "main",
+            "index": 4
+          }
+        ]
+      ]
+    },
+    "Merge CSV Sources": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Zendesk Mock",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Salesforce Mock",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "NPS Mock",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "App Store Mock",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Forum Social Mock",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Intercom Mock",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Gong Call 1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Gong Call 2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Gong Call 3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Gong Call 5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Gong Call 6",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Gong Call 7",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Gong Call 8",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Dovetail Interview 1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Dovetail Interview 2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Dovetail Interview 3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Dovetail Interview 4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Dovetail Interview 5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Dovetail Interview 6",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Parse Gong 4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse NPS Mock": {
+      "main": [
+        [
+          {
+            "node": "Merge CSV Sources1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse App Store Mock": {
+      "main": [
+        [
+          {
+            "node": "Merge CSV Sources1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Parse Forum Social Mock": {
+      "main": [
+        [
+          {
+            "node": "Merge CSV Sources2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Intercom Mock": {
+      "main": [
+        [
+          {
+            "node": "Merge CSV Sources2",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge CSV Sources1": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge CSV Sources2": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Parse Gong 3": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Parse Gong 4": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "Parse Gong 7": {
+      "main": [
+        [
+          {
+            "node": "Merge3",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Parse Gong 8": {
+      "main": [
+        [
+          {
+            "node": "Merge3",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "Parse Dovetail 3": {
+      "main": [
+        [
+          {
+            "node": "Merge4",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Parse Dovetail 6": {
+      "main": [
+        [
+          {
+            "node": "Merge4",
+            "type": "main",
+            "index": 5
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge1": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge3": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "Merge4": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Merge2": {
+      "main": [
+        [
+          {
+            "node": "Send to Backend",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "88162246-5f97-4926-b5ab-1212ee42de1e",
+  "meta": {
+    "instanceId": "1168852a6b2c2b0e901500a2f5b8c6a9ddfdb1108644b6f60420f7a15a2cc732"
+  },
+  "id": "YgjhrKlLMXYrUgQ3",
+  "tags": []
+}

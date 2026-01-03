@@ -1,0 +1,28 @@
+Call Date: 2024-03-18
+Duration: 60 minutes
+Rep: Michael Chen
+Customer: TechGlobal Inc (acc_005)
+Deal Value: $100,000 ARR
+Stage: Closed-Lost
+
+TRANSCRIPT:
+
+Rep: I understand you've decided to go with another solution. Can you share what influenced that decision?
+
+Customer: Yeah, it's mainly performance. The dashboard is just too slow - takes 15-20 seconds to load sometimes. Our team of 50 users can't work efficiently with that kind of lag. We lost productivity and that's unacceptable.
+
+Rep: I see. Was there anything else?
+
+Customer: The export feature also had issues, but the performance was the main problem. We need something that can handle large datasets without slowing down. We evaluated CompetitorY and they have much better performance.
+
+Rep: I understand. Performance is critical for your use case.
+
+Customer: Exactly. We need speed. Our analytics team works with large datasets daily and the slow performance was killing productivity. We had to make a change. We went with CompetitorY because of their performance.
+
+KEY INSIGHTS:
+- Dashboard performance is deal breaker
+- 15-20 second load times unacceptable
+- 50+ user team affected
+- Lost to CompetitorY due to performance
+- Large dataset handling critical
+- Productivity loss was main concern

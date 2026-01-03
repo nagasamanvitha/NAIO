@@ -1,0 +1,27 @@
+Call Date: 2024-01-30
+Duration: 60 minutes
+Rep: Michael Chen
+Customer: TechGlobal Inc (acc_005)
+Deal Value: $120,000 ARR
+Stage: Closed-Lost
+
+TRANSCRIPT:
+
+Rep: I understand you've decided to go with another solution. Can you share what influenced that decision?
+
+Customer: Yeah, it's mainly the export feature. The CSV export crashes every single time we try to use it. We need reliable export for our compliance reporting, and this is just not acceptable. We went with CompetitorX because they have this working perfectly.
+
+Rep: I see. Was there anything else?
+
+Customer: The export issue was the main problem. We evaluated multiple solutions, and CompetitorX had reliable export functionality. That was the deciding factor. We lost productivity because of the crashes, and that's unacceptable for an enterprise solution.
+
+Rep: I understand. Export reliability is critical for your use case.
+
+Customer: Exactly. We need to export data weekly, sometimes daily. The crashes were blocking our entire workflow. We had to make a change. We went with CompetitorX because of their reliable export.
+
+KEY INSIGHTS:
+- Export feature crashes are deal breaker
+- Lost to CompetitorX due to export reliability
+- Weekly/daily export needs critical
+- Enterprise compliance requirements
+- Productivity loss was main concern

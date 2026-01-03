@@ -1,0 +1,41 @@
+post_id,platform,content,author,created_at,engagement
+FS-001,"Reddit","Export feature is broken. App crashes when exporting CSV. This is really frustrating. Anyone else experiencing this?","reddit_user_1","2024-01-25T10:00:00Z",45
+FS-002,"Twitter","The export feature keeps crashing. Very frustrating. @ProductName please fix this.","twitter_user_1","2024-01-30T14:00:00Z",120
+FS-003,"Reddit","Export crashes constantly. Lost to CompetitorX because of this. Deal breaker. Anyone else?","reddit_user_2","2024-02-02T09:00:00Z",89
+FS-004,"Reddit","Mobile app needs dark mode. Too bright at night. Please add this feature.","reddit_user_3","2024-02-18T09:00:00Z",32
+FS-005,"Twitter","Mobile dark mode would be great. Using it at night is painful.","twitter_user_2","2024-02-25T11:00:00Z",54
+FS-006,"Twitter","Dashboard is way too slow. Takes forever to load. This is unacceptable.","twitter_user_3","2024-03-20T11:00:00Z",89
+FS-007,"Reddit","Performance issues are killing us. Dashboard too slow with large datasets.","reddit_user_4","2024-03-28T13:00:00Z",67
+FS-008,"Twitter","Performance is deal breaker. Lost to CompetitorY because of speed.","twitter_user_4","2024-03-30T15:00:00Z",112
+FS-009,"Twitter","Would love Slack integration. That would be perfect for our team.","twitter_user_5","2024-04-22T10:00:00Z",54
+FS-010,"Reddit","Slack integration would save us hours. Please prioritize this.","reddit_user_5","2024-04-28T15:00:00Z",41
+FS-011,"Reddit","Onboarding is too complicated. Took hours to figure out. Needs simplification.","reddit_user_6","2024-05-18T08:00:00Z",41
+FS-012,"Twitter","Onboarding took 3 hours. Almost gave up. Too complex.","twitter_user_6","2024-05-25T10:00:00Z",78
+FS-013,"Twitter","API docs are outdated. Can't build integrations. Documentation is wrong.","twitter_user_7","2024-06-15T09:00:00Z",78
+FS-014,"Reddit","API documentation is completely wrong. Lost deal to CompetitorZ. Blocking us.","reddit_user_7","2024-06-28T10:00:00Z",95
+FS-015,"Reddit","UI is cluttered. Hard to find features. Needs redesign.","reddit_user_8","2025-07-25T11:00:00Z",29
+FS-015A,"Twitter","Export issues in July. Still broken. Very frustrating.","twitter_user_15","2025-07-08T10:00:00Z",67
+FS-015B,"Reddit","Performance concerns in Q3. Dashboard slower than before.","reddit_user_17","2025-07-20T14:00:00Z",45
+FS-015C,"Twitter","AI features needed in July. CompetitorX has this.","twitter_user_18","2025-07-12T11:00:00Z",78
+FS-015D,"Reddit","Analytics improvements needed. CompetitorY is better.","reddit_user_19","2025-07-18T14:00:00Z",56
+FS-016,"Twitter","Mobile app crashes on iOS 17. This is blocking our team.","twitter_user_8","2025-08-20T10:30:00Z",95
+FS-017,"Reddit","iOS app completely broken. Can't use it at all.","reddit_user_9","2025-08-25T11:00:00Z",112
+FS-017A,"Twitter","AI features needed in August. CompetitorX has this.","twitter_user_16","2025-08-12T11:00:00Z",78
+FS-017B,"Reddit","Integration requests in August. Need more options.","reddit_user_18","2025-08-28T09:00:00Z",56
+FS-018,"Reddit","AI automation is missing. CompetitorX has this and we're considering switching.","reddit_user_10","2025-09-10T14:00:00Z",112
+FS-019,"Twitter","AI features are critical. CompetitorX has this. We're switching.","twitter_user_9","2025-09-15T10:00:00Z",156
+FS-020,"Twitter","Advanced analytics needed. CompetitorY has better reporting.","twitter_user_10","2025-09-28T09:00:00Z",67
+FS-021,"Reddit","Analytics are too basic. CompetitorY has much better. This is blocking enterprise.","reddit_user_11","2025-09-30T11:00:00Z",89
+FS-021A,"Twitter","Security features needed in Q3. SOC 2 compliance important.","twitter_user_17","2025-09-18T10:00:00Z",89
+FS-021B,"Reddit","AI automation is deal breaker. CompetitorX has this.","reddit_user_20","2025-09-12T09:00:00Z",112
+FS-021C,"Twitter","Advanced analytics critical. CompetitorY has better reporting.","twitter_user_18","2025-09-18T10:00:00Z",95
+FS-021D,"Reddit","Reporting improvements needed. CompetitorZ is better.","reddit_user_21","2025-09-25T15:00:00Z",78
+FS-022,"Reddit","Multi-language support would help our international team.","reddit_user_12","2025-10-28T11:00:00Z",38
+FS-023,"Twitter","Localization would be great for our global team.","twitter_user_11","2025-10-30T13:00:00Z",54
+FS-024,"Twitter","Real-time collaboration needed. Multiple users should work together.","twitter_user_12","2025-11-15T13:00:00Z",82
+FS-025,"Reddit","Collaboration is deal breaker. CompetitorZ has this. We're evaluating.","reddit_user_13","2025-11-18T15:00:00Z",103
+FS-026,"Reddit","Custom workflows would be great. Our processes are unique.","reddit_user_14","2025-11-30T10:00:00Z",51
+FS-027,"Twitter","Data backup concerns. Lost data last month. Need better backup.","twitter_user_13","2025-12-20T15:00:00Z",103
+FS-028,"Reddit","Data backup is unreliable. Lost critical data. Major concern.","reddit_user_15","2025-12-22T10:00:00Z",78
+FS-029,"Reddit","SSO integration is missing. This is critical for enterprise. CompetitorX has SSO.","reddit_user_16","2025-12-28T09:00:00Z",156
+FS-030,"Twitter","SSO is mandatory. Lost deal to CompetitorX. Deal breaker.","twitter_user_14","2025-12-30T16:00:00Z",189

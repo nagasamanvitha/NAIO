@@ -1,0 +1,28 @@
+Call Date: 2025-09-08
+Duration: 45 minutes
+Rep: Sarah Johnson
+Customer: Enterprise Analytics (acc_018)
+Deal Value: $250,000 ARR
+Stage: Closed-Lost
+
+TRANSCRIPT:
+
+Rep: I understand you've decided to go with another solution. Can you share what influenced that decision?
+
+Customer: Yeah, it's the AI automation features. We need AI-powered automation, and CompetitorX has this working really well. We evaluated both solutions, and CompetitorX's AI features were just more advanced. This is a deal breaker for us.
+
+Rep: I see. How important are AI features for your use case?
+
+Customer: They're absolutely critical. We're an AI-first company, and we need our tools to have strong AI capabilities. CompetitorX has this, and we went with them because of it. This was the deciding factor.
+
+Rep: I understand. AI capabilities are essential for your workflow.
+
+Customer: Exactly. We need AI automation, AI-powered insights, and AI-driven workflows. CompetitorX has all of this. Without these features, we can't fully utilize the product. We went with CompetitorX because of their AI capabilities.
+
+KEY INSIGHTS:
+- AI automation features are deal breaker
+- Lost to CompetitorX due to AI capabilities
+- AI-first company requirements
+- Advanced AI features needed
+- Competitive pressure from CompetitorX
+

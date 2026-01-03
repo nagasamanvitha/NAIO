@@ -1,0 +1,27 @@
+Call Date: 2024-06-20
+Duration: 50 minutes
+Rep: Emily Rodriguez
+Customer: DataSystems Inc (acc_013)
+Deal Value: $95,000 ARR
+Stage: Closed-Lost
+
+TRANSCRIPT:
+
+Rep: I understand you've decided to go with another solution. What was the main factor?
+
+Customer: The API documentation is completely outdated. We're building integrations with our internal systems, and the docs don't match the current API at all. We wasted days trying to figure out what was wrong, only to realize the documentation was from 2023.
+
+Rep: I see. How important is API documentation for your use case?
+
+Customer: It's critical. We're an enterprise customer with complex integration needs. We can't build integrations when the documentation is wrong. We evaluated CompetitorZ and they have accurate, up-to-date documentation. That was the deciding factor.
+
+Rep: I understand. Accurate documentation is essential for integrations.
+
+Customer: Exactly. We need to integrate with Salesforce, our data warehouse, and several other systems. Without accurate API docs, we can't do that. We went with CompetitorZ because their documentation is reliable and current.
+
+KEY INSIGHTS:
+- API documentation outdated (from 2023)
+- Lost to CompetitorZ due to documentation quality
+- Enterprise integration needs critical
+- Wasted time due to wrong documentation
+- Documentation accuracy is deal breaker

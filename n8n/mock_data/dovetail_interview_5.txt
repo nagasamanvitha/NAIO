@@ -1,0 +1,39 @@
+Interview Date: 2025-11-10
+Duration: 50 minutes
+Interviewer: David Kim
+User: GlobalTeam Inc (acc_020)
+User Persona: Team Lead
+Tags: collaboration, real-time, workflow
+Segment: Enterprise
+
+INTERVIEW NOTES:
+
+User: We need real-time collaboration features. Multiple users should be able to work on the same data simultaneously.
+
+Interviewer: Can you tell me more about your collaboration needs?
+
+User: We have a distributed team, and we need to work together in real-time. Right now, only one person can edit at a time, which is really limiting. We need real-time editing, commenting, and collaboration.
+
+Interviewer: How does this affect your workflow?
+
+User: It's a major bottleneck. We have to take turns editing, which slows everything down. We need multiple people working simultaneously. CompetitorZ has this, and we're evaluating them because of it.
+
+Interviewer: What would help?
+
+User: Real-time collaboration - multiple users editing, commenting, seeing changes in real-time. Basically, what CompetitorZ has. Their collaboration features are excellent.
+
+Interviewer: How critical is this?
+
+User: It's a deal breaker. We can't efficiently work without real-time collaboration. This is blocking our productivity. We're seriously considering CompetitorZ because of their collaboration features.
+
+KEY INSIGHTS:
+- Real-time collaboration is critical
+- Current single-user editing is bottleneck
+- Distributed team needs simultaneous access
+- CompetitorZ has better collaboration
+- This is a deal breaker
+- Blocking productivity
+
+PAIN LEVEL: 9/10
+URGENCY: Critical
+

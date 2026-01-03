@@ -1,0 +1,50 @@
+account_id,deal_value,rep_notes,lost_reason,stage,created_at,arr
+acc_001,50000,"Customer needs reliable CSV export functionality. Currently evaluating CompetitorX who has this feature working. Export crashes are blocking the deal.","Missing reliable export","closed-lost","2024-01-20T10:00:00Z",50000
+acc_003,75000,"High interest but needs data export for analytics team. Export fails for large datasets. No deal blocker yet but concern.","None - still active","proposal","2024-01-25T14:00:00Z",75000
+acc_005,120000,"Export feature crashes are deal breaker. Lost to CompetitorX because they have reliable export. This is critical for enterprise.","Export issues","closed-lost","2024-01-30T09:00:00Z",120000
+acc_002,25000,"Mobile app needs dark mode. Team uses mobile daily and bright screen is an issue. Dark mode requested.","None - still active","proposal","2024-02-08T09:00:00Z",25000
+acc_004,30000,"Mobile app navigation confusing. Team uses mobile daily and can't find features. Navigation needs improvement.","None - still active","discovery","2024-02-20T16:00:00Z",30000
+acc_006,15000,"Mobile dark mode is important. Team uses mobile at night and bright screen is problematic.","None - still active","demo","2024-02-28T11:00:00Z",15000
+acc_005,100000,"Performance concerns raised. Dashboard too slow - takes 15+ seconds to load. Lost 2 deals this month due to speed issues.","Performance issues","closed-lost","2024-03-15T11:00:00Z",100000
+acc_006,85000,"Dashboard performance issues. Too slow when working with large datasets. This is affecting their productivity.","Performance issues","negotiation","2024-03-28T13:00:00Z",85000
+acc_007,150000,"Performance is deal breaker. Lost to CompetitorY because of speed. Dashboard takes 20+ seconds to load.","Performance issues","closed-lost","2024-03-30T15:00:00Z",150000
+acc_007,30000,"Wants Slack integration. Would make workflow much better. Not a blocker but nice to have.","None - still active","discovery","2024-04-15T10:00:00Z",30000
+acc_008,20000,"Slack notifications would be great. Real-time notifications would save time. Not critical but requested.","None - still active","demo","2024-04-30T15:00:00Z",20000
+acc_009,45000,"Slack integration is important. Team relies on Slack for all communications. Would improve adoption.","None - still active","proposal","2024-05-08T10:00:00Z",45000
+acc_010,12000,"Onboarding took too long. 3 hours to set up. Concerned about team adoption. Process too complex.","Complex onboarding","discovery","2024-05-10T08:00:00Z",12000
+acc_011,18000,"Onboarding confusing. New team members struggle. Needs to be more intuitive and simplified.","Complex onboarding","demo","2024-05-25T12:00:00Z",18000
+acc_012,25000,"Onboarding is too complex. Took 4 hours. Almost gave up. This is affecting new user adoption.","Complex onboarding","discovery","2024-06-02T14:00:00Z",25000
+acc_012,120000,"Enterprise customer needs updated API documentation. Current docs are outdated and blocking integrations. This is a must-have.","Outdated API docs","negotiation","2024-06-08T09:00:00Z",120000
+acc_013,95000,"API documentation outdated. Hard to build integrations when docs don't match reality. CompetitorZ has better docs.","Outdated API docs","closed-lost","2024-06-20T14:00:00Z",95000
+acc_014,180000,"API docs are completely wrong. Lost deal to CompetitorZ because they have accurate documentation. This is blocking enterprise.","Outdated API docs","closed-lost","2024-06-28T10:00:00Z",180000
+acc_014,25000,"UI feedback: interface is cluttered. Hard to find features. Not a deal breaker but affects user satisfaction.","None - still active","demo","2025-07-12T11:00:00Z",25000
+acc_015,45000,"Export feature critical. CSV export crashes blocking monthly reporting. This is a deal breaker if not fixed.","Export issues","negotiation","2025-07-28T16:00:00Z",45000
+acc_026,95000,"Performance issues in Q3. Dashboard too slow. This is affecting our decision.","Performance issues","proposal","2025-07-18T10:00:00Z",95000
+acc_027,35000,"Mobile app issues in July. Multiple crashes reported.","Mobile app crashes","discovery","2025-07-25T14:00:00Z",35000
+acc_033,120000,"AI automation is critical. CompetitorX has this and we're evaluating them.","Missing AI features","proposal","2025-07-20T11:00:00Z",120000
+acc_034,85000,"Analytics need improvements. CompetitorY has better reporting.","Missing analytics","discovery","2025-07-28T14:00:00Z",85000
+acc_016,8000,"Mobile app crashes on new iOS. This is blocking their team. App crashes on iOS 17.1.","Mobile app crashes","closed-lost","2025-08-15T10:30:00Z",8000
+acc_017,12000,"iOS app completely broken. Entire team uses iOS. This is a deal breaker.","Mobile app crashes","closed-lost","2025-08-22T14:00:00Z",12000
+acc_017,150000,"AI automation is critical. CompetitorX has this and we're losing deals. This feature would close 3 deals worth $450K.","Missing AI features","negotiation","2025-08-30T14:00:00Z",150000
+acc_028,120000,"Performance degradation in August. Dashboard loading times increased significantly.","Performance issues","negotiation","2025-08-12T09:00:00Z",120000
+acc_029,65000,"Integration needs in August. CompetitorY has better integration options.","Missing integrations","proposal","2025-08-22T11:00:00Z",65000
+acc_018,250000,"AI features are deal breaker. CompetitorX has this and we're losing multiple deals. This is critical.","Missing AI features","closed-lost","2025-09-08T09:00:00Z",250000
+acc_018,200000,"Advanced analytics needed. CompetitorY has better reporting. This is a must-have for enterprise.","Missing analytics","proposal","2025-09-18T09:30:00Z",200000
+acc_019,180000,"Analytics are too basic. CompetitorY has much better reporting. This is blocking enterprise deals.","Missing analytics","closed-lost","2025-09-25T11:00:00Z",180000
+acc_030,280000,"Security features needed. SOC 2 compliance is critical for Q3 decisions.","Missing compliance","negotiation","2025-09-08T10:00:00Z",280000
+acc_031,85000,"Reporting improvements needed. CompetitorZ has superior reporting capabilities.","Missing reporting","proposal","2025-09-28T13:00:00Z",85000
+acc_035,150000,"AI features are deal breaker. CompetitorX has this. We're considering switching.","Missing AI features","negotiation","2025-09-12T09:00:00Z",150000
+acc_036,110000,"Advanced analytics needed. CompetitorY has much better reporting.","Missing analytics","proposal","2025-09-18T10:00:00Z",110000
+acc_037,75000,"Integration needs in September. CompetitorY has better ecosystem.","Missing integrations","discovery","2025-09-28T14:00:00Z",75000
+acc_019,60000,"Multi-language support needed for international expansion. Without this, we can't serve global customers.","Missing localization","discovery","2025-10-20T11:00:00Z",60000
+acc_020,45000,"Localization is needed for global expansion. Multi-language support is important for international customers.","Missing localization","discovery","2025-10-28T13:00:00Z",45000
+acc_020,180000,"Real-time collaboration is critical. Multiple users need to work simultaneously. This is a deal breaker.","Missing collaboration","negotiation","2025-11-08T13:00:00Z",180000
+acc_021,220000,"Collaboration features are deal breaker. CompetitorZ has real-time collaboration. Lost deal because of this.","Missing collaboration","closed-lost","2025-11-15T15:00:00Z",220000
+acc_021,90000,"Custom workflows needed. Our processes are unique. CompetitorZ offers this and we're evaluating them.","Missing customization","proposal","2025-11-22T10:00:00Z",90000
+acc_022,75000,"Workflow customization is essential. Our processes are unique. Without this, we can't fully utilize the product.","Missing customization","proposal","2025-11-30T12:00:00Z",75000
+acc_022,75000,"Data backup concerns. Lost data last month. Need better backup and recovery options.","Data security concerns","discovery","2025-12-12T15:00:00Z",75000
+acc_023,120000,"Data backup is unreliable. Lost critical data. This is a major concern for enterprise customers.","Data security concerns","discovery","2025-12-18T10:00:00Z",120000
+acc_023,300000,"SOC 2 compliance is required. Enterprise requirement. Without this, we can't proceed with the deal.","Missing compliance","negotiation","2025-12-15T09:00:00Z",300000
+acc_024,250000,"SOC 2 compliance is blocking multiple deals worth $500K+ ARR. This is critical for enterprise.","Missing compliance","negotiation","2025-12-20T11:00:00Z",250000
+acc_024,250000,"SSO integration is missing. This is a deal breaker for our enterprise. CompetitorX has SSO and we're considering them.","Missing SSO","closed-lost","2025-12-28T14:00:00Z",250000
+acc_025,180000,"SSO is mandatory for enterprise. Lost deal to CompetitorX because they have SSO. This is blocking $250K ARR.","Missing SSO","closed-lost","2025-12-30T16:00:00Z",180000

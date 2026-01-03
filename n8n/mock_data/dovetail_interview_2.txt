@@ -1,0 +1,38 @@
+Interview Date: 2024-05-15
+Duration: 45 minutes
+Interviewer: Sarah Thompson
+User: StartupCo (acc_010)
+User Persona: New User
+Tags: onboarding, ux, setup
+Segment: SMB
+
+INTERVIEW NOTES:
+
+User: We just started using the product last week. The onboarding was... challenging.
+
+Interviewer: Can you tell me more about that?
+
+User: It took us 3 hours to get set up. There were so many steps and it wasn't clear what we needed to do. Our team was confused and frustrated. We almost gave up.
+
+Interviewer: What was the most confusing part?
+
+User: The initial setup process. Too many steps, not enough guidance. We didn't know what was required vs optional. It was overwhelming for new users.
+
+Interviewer: How did you eventually figure it out?
+
+User: We had to watch YouTube tutorials and ask for help. It shouldn't be that hard. The onboarding needs to be more intuitive and simplified.
+
+Interviewer: What would have helped?
+
+User: Clearer instructions, fewer steps, better guidance. Make it easier for new users to get started. We almost didn't continue because of how complicated it was.
+
+KEY INSIGHTS:
+- Onboarding took 3 hours (too long)
+- Too many steps and unclear guidance
+- Team was confused and frustrated
+- Almost gave up due to complexity
+- Needed external help (YouTube, support)
+- Onboarding needs major simplification
+
+PAIN LEVEL: 8/10
+URGENCY: High

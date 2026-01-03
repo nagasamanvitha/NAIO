@@ -1,0 +1,39 @@
+Interview Date: 2025-12-15
+Duration: 60 minutes
+Interviewer: Sarah Johnson
+User: Enterprise Security (acc_023)
+User Persona: Security Admin
+Tags: security, sso, compliance, enterprise
+Segment: Enterprise
+
+INTERVIEW NOTES:
+
+User: We're evaluating your solution, but SSO integration is absolutely mandatory for us.
+
+Interviewer: Can you tell me more about your SSO requirements?
+
+User: We need Single Sign-On integration with our identity provider. We're an enterprise customer with strict security requirements, and SSO is non-negotiable. Without SSO, we can't proceed.
+
+Interviewer: What identity providers do you use?
+
+User: We use Okta, Azure AD, and Google Workspace. We need SSO integration with all of them. CompetitorX has this working perfectly, and we're considering them because of it.
+
+Interviewer: How critical is SSO for your organization?
+
+User: It's absolutely mandatory. We have security policies that require SSO for all enterprise applications. Without SSO, we can't use the product. This is blocking multiple deals for us.
+
+Interviewer: What would help?
+
+User: SSO integration with major identity providers. That's it. Without this, we can't proceed. CompetitorX has this, and that's why we're considering them. This is a deal breaker.
+
+KEY INSIGHTS:
+- SSO integration is mandatory requirement
+- Enterprise security policies require SSO
+- Multiple identity providers needed (Okta, Azure AD, Google)
+- CompetitorX has SSO working
+- This is a deal breaker
+- Blocking multiple enterprise deals
+
+PAIN LEVEL: 10/10
+URGENCY: Critical
+

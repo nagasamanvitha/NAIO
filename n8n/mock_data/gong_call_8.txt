@@ -1,0 +1,28 @@
+Call Date: 2025-12-28
+Duration: 60 minutes
+Rep: Emily Rodriguez
+Customer: Enterprise Security Inc (acc_024)
+Deal Value: $250,000 ARR
+Stage: Closed-Lost
+
+TRANSCRIPT:
+
+Rep: I understand you've decided to go with another solution. Can you share what influenced that decision?
+
+Customer: SSO integration is absolutely mandatory for us. We're an enterprise customer, and we need Single Sign-On integration with our identity provider. Your solution doesn't have SSO, and that's a deal breaker. We went with CompetitorX because they have SSO working perfectly.
+
+Rep: I see. How important is SSO for your organization?
+
+Customer: It's mandatory. We have strict security requirements, and SSO is non-negotiable. Without SSO, we can't proceed with any solution. CompetitorX has this, and that was the deciding factor.
+
+Rep: I understand. SSO is a requirement for enterprise customers.
+
+Customer: Exactly. We need SSO integration with Okta, Azure AD, and other identity providers. CompetitorX has this working, and we went with them because of it. This is blocking multiple deals for us - we're talking about $250K+ ARR that we can't close without SSO.
+
+KEY INSIGHTS:
+- SSO integration is mandatory requirement
+- Lost to CompetitorX due to missing SSO
+- Enterprise security requirements
+- Multiple identity providers needed
+- $250K+ ARR blocked without SSO
+

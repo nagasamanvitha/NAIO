@@ -1,0 +1,31 @@
+Call Date: 2025-07-15
+Duration: 50 minutes
+Rep: Michael Chen
+Customer: Data Insights Inc (acc_033)
+Deal Value: $120,000 ARR
+Stage: Proposal
+
+TRANSCRIPT:
+
+Rep: Thanks for taking the call. What are your main priorities?
+
+Customer: AI automation is critical for us. We need AI-powered features that can automate our workflows. CompetitorX has this and we're seriously evaluating them because of it.
+
+Rep: I understand. How would AI automation help?
+
+Customer: We have repetitive tasks that take hours. AI automation would handle those automatically. CompetitorX has this working, and it's a major factor in our decision.
+
+Rep: What else is important?
+
+Customer: Performance is also important, but AI automation is the priority. If you can deliver strong AI features, we're very interested. But CompetitorX already has this.
+
+Rep: I'll make sure our product team knows this is a priority.
+
+Customer: Good. This feature would close the deal for us. We're talking about $120K ARR if we can get this right.
+
+KEY INSIGHTS:
+- AI automation is critical priority
+- CompetitorX has AI features (competitive pressure)
+- Would save significant time
+- $120K ARR potential if feature delivered
+- Deal depends on this feature

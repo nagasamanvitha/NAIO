@@ -1,0 +1,31 @@
+Call Date: 2025-08-30
+Duration: 55 minutes
+Rep: David Kim
+Customer: AI Solutions Corp (acc_017)
+Deal Value: $150,000 ARR
+Stage: Negotiation
+
+TRANSCRIPT:
+
+Rep: Thanks for the call. What are your main priorities for this solution?
+
+Customer: AI automation is absolutely critical for us. We need AI-powered features that can automate repetitive tasks. We're evaluating multiple solutions, and CompetitorX has strong AI automation features. This would save us 10 hours per week.
+
+Rep: I understand. How would AI automation help your team?
+
+Customer: We have a lot of repetitive data processing tasks. AI automation would handle those automatically, freeing up our team for more strategic work. CompetitorX has this, and we're seriously considering them because of it.
+
+Rep: What else is important to you?
+
+Customer: Performance is also important, but AI automation is the priority. If you can deliver strong AI features, we're very interested. But we're also looking at CompetitorX who already has this working.
+
+Rep: I'll make sure our product team knows this is a priority. Is there anything else?
+
+Customer: Not really. AI automation is the main thing. This feature would close multiple deals for us - we're talking about $450K in potential ARR if we can get this right.
+
+KEY INSIGHTS:
+- AI automation is critical priority
+- CompetitorX has AI features (competitive pressure)
+- Would save 10 hours per week
+- $450K ARR potential if feature delivered
+- Multiple deals depend on this feature
